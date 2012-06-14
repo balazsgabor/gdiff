@@ -1,0 +1,26 @@
+gdiff
+=====
+
+Exports the changed files from a git repository between two commits.
+I use this for keeping websites up-to-date over ftp, so I have to 
+upload only the changed files.
+
+The script also creates a TO_DELETE.lst file to the output directory.
+
+
+Usage (from a git repo):
+========================
+
+/path/to/gdiff -o /tmp/project
+
+This command exports the files from the last commit to /tmp/project.
+
+/path/to/gdiff -o /tmp/project v1.0
+
+Copy the changed files since v1.0 to /tmp/project.
+
+
+Caveats:
+========
+
+The script always takes the version of a file from the working copy!
